@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  db:
+    image: postgres:13
+    ports: 
+      - 5432:5432
+    environment:
+      POSTGRES_USER: meetnrun
+      POSTGRES_PASSWORD: meetnrun
+      POSTGRES_DB: meetnrun
+    volumes:
+      - meetnrundata:/var/lib/postgresql/data/
+
+volumes:
+  meetnrundata:
+    driver: local
